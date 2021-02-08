@@ -26,7 +26,7 @@ function Apiget() {
         <div className="location">
           <p className="date-info">Monday, 8th April</p>
           <p className="city">{apiData.name}, {/* {apiData.sys} */}</p>
-          <p className="date-info">{/* {apiData.weather.[0].description} */}</p>
+          <p className="date-info">{apiData.weather.[0].description}</p>
         </div>
         <div className="weather">
           <div className="icon-weather">
