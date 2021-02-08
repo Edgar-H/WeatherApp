@@ -1,5 +1,5 @@
 import WatchLocation from './components/WatchLocation.jsx'
-import './style/App.css';
+import './style/style.css';
 
 function App() {
   return (

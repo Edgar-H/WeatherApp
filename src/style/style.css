@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background: linear-gradient(60deg, #2193b0, #6dd5ed);
+  height: 100vh;
+}
+
+.container div {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #fff;
+}
+
+.location {
+  padding-top: 20px;
+}
+
+.location p {
+  width: 100%;
+  text-align: center;
+}
+
+.date-info {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.city {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.icon-weather {
+  padding: 10px 0;
+}
+
+.icon-weather img {
+  width: 150px;
+  height: 150px;
+}
+
+.svg-inline--fa {
+  fill: #fff;
+}
+
+.tem-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tem-btn p {
+  text-align: center;
+  width: 100%;
+  font-size: 70px;
+  font-weight: 900;
+}
+
+.tem-btn button {
+  padding: 6px 28px;
+  border: none;
+  background: rgba(29, 216, 79, 0.856);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.description {
+  padding-top: 20px;
+}
+
+.description p {
+  width: 100%;
+  text-align: center;
+  padding: 3px 0;
+}
+/*# sourceMappingURL=style.css.map */
