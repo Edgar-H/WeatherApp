@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 function Apiget() {
     const [apiData, setApiData] = useState([]);
+    const {clouds, main, sys, weather, wind} = apiData; // <-Desestructuración 
     useEffect(() =>{
       navigator.geolocation.getCurrentPosition(succes);
       async function succes(coordsPosition){
@@ -18,29 +19,29 @@ function Apiget() {
       };
     },[])
 
-/*     let celsius = (apiData.main.temp) - 273.15;
-    console.log(celsius); */
-
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+let imgcondition = new URL(`/images/${weather.icon}.svg`)
     return(
       <div className="container">
         <div className="location">
-          <p className="date-info">Monday, 8th April</p>
-          <p className="city">{apiData.name}, {/* {apiData.sys} */}</p>
-          <p className="date-info">{apiData.weather.[0].description}</p>
+          <p className="date-info">{new Date().toLocaleDateString('en-US', options)}</p>
+          <p className="city">{apiData.name}, {}</p>
+          <p className="date-info">{/* {weather.description} */}</p>
         </div>
         <div className="weather">
           <div className="icon-weather">
             <img src="/images/11d.svg"/>
+            {/* <img src={imgcondition}/> */}
           </div>
           <div className="tem-btn">
-            <p>10°C</p>
+            <p>{/* {main.temp} */}°C</p>
             <div><button>°F</button></div>
           </div>
         </div>
         <div className="description">
-          <p>Wind Speed: {/* {apiData.wind.speed} */}m/s</p>
-          <p>Clouds: {/* {apiData.clouds.all} */}%</p>
-          <p>Presure: {/* {apiData.main.pressure} */}mb</p>
+          <p>Wind Speed: {/* {wind.speed} */}m/s</p>
+          <p>Clouds: {/* {clouds.all} */}%</p>
+          <p>Presure: {/* {main.pressure} */}mb</p>
         </div>
       </div>
     )

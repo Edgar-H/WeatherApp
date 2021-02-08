@@ -77,3 +77,11 @@
     padding: 3px 0;
   }
 }
+
+.error {
+  height: 100vh;
+  width: 100%;
+  background: #dddddd;
+  position: absolute;
+  z-index: 999;
+}
