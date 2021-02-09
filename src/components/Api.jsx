@@ -1,8 +1,29 @@
 import React, {useState, useEffect} from 'react'
 
 function Apiget() {
-    const [apiData, setApiData] = useState([]);
-    const {clouds, main, sys, weather, wind} = apiData; // <-Desestructuración 
+    const [apiData, setApiData] = useState([
+{
+name:"",
+    main:{
+    temp:"",
+    pressure:""
+    },
+      sys:{
+        country:""
+      },
+      weather:{
+        description:"",
+        icon:""
+      },
+      wind:{
+      speed:""
+      },
+      clouds:{
+      all:""
+      },
+}
+]);
+ 
     useEffect(() =>{
       navigator.geolocation.getCurrentPosition(succes);
       async function succes(coordsPosition){
@@ -20,12 +41,12 @@ function Apiget() {
     },[])
 
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-let imgcondition = new URL(`/images/${weather.icon}.svg`)
+// let imgcondition = new URL(`/images/${weather.icon}.svg`)
     return(
       <div className="container">
         <div className="location">
           <p className="date-info">{new Date().toLocaleDateString('en-US', options)}</p>
-          <p className="city">{apiData.name}, {}</p>
+          <p className="city">{apiData.name}, {apiData.sys.country}</p>
           <p className="date-info">{/* {weather.description} */}</p>
         </div>
         <div className="weather">
